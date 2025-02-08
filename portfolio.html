@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="info">
+            <div class="name">
+                <h1>Bryan <span>Agustin</span></h1>
+                <small>agustinbryan662@gmail.com</small>
+            </div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <span>|</span>
+                <a href="#projects">Projects</a>
+                <span>|</span>
+                <a href="#contact">Contact</a>
+            </nav>
+            <nav class="nav-buttons">
+                <a href="#"><i class="fa-brands fa-facebook" title="Facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-github" title="Github"></i></a>
+                <a href="#"><i class="fa-solid fa-file" title="Resume"></i></a>
+            </nav>
+        </aside>
+
+        <a href="#about" class="next-btn"><i class="fa-solid fa-arrow-down"></i></a>
+    </div>
+
+    <section class="about" id="about">
+        <div class="about-title">
+            <h3>A BIT ABOUT ME</h3>
+        </div>
+
+        <div class="about-content">
+            <small>I'm a self-taught web developer passionate about creating intuitive and responsive websites and/or web apps. I specialize in HTML, CSS, JavaScript, Python, and have experience with frameworks like React and Flask. I'm always learning new skills and love taking on new challenges to grow as a developer. Excited to build impactful projects and collaborate with others in the tech community!</small>
+        </div>
+
+        <div class="tech-stack">
+            <h4>I also have knowledge with these technologies</h4>
+            <div class="tech-container">
+                <ul>
+                    <li><i class="fa-brands fa-html5"></i></li>
+                    <li><i class="fa-brands fa-css3-alt"></i></li>
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-python"></i></li>
+                    <li><i class="fa-solid fa-database"></i></li>
+                    <li><i class="fa-solid fa-flask"></i></li>
+                    <li><i class="fa-solid fa-c"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="project-header">
+            <h4>MY WORK/s</h4>
+        </div>
+
+        <div class="project-card">
+            <a href="#">VIEW GITHUB</a>
+            <h5 class="project-title">Safe Haven</h5>
+            <small class="project-description">Safe Haven is my project for the course Harvard's CS50x Introduction to Computer Programming. It serves as a password vault that requires 1 main username and password to access your credentials in many accounts.</small>
+            <div class="tech-used">
+                <ul>
+                    <li><i class="fa-brands fa-html5"></i></li>
+                    <li><i class="fa-brands fa-css3-alt"></i></li>
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-python"></i></li>
+                    <li><i class="fa-solid fa-flask"></i></li>
+                </ul>
+
+                <div class="img-container">
+                    <img src="viber_image_2025-01-14_16-03-01-131.png" alt="project-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-title">
+            <h4>CONTACT</h4>
+        </div>
+
+        <div class="contact-info">
+            <h5>Dont't be a stranger, contact me!</h5>
+            <form action="#">
+                <div class="input-container">
+                    <input name="name" type="text" placeholder=" ">
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="input-container">
+                    <input name="email" type="email" placeholder=" ">
+                    <label for="email">Email or Number</label>
+                </div>
+
+                <div class="input-container">  
+                    <textarea name="text" id="text"></textarea>
+                    <label for="text">Message</label>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

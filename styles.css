@@ -1,0 +1,429 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #020202;
+    color: #fff;
+    position: relative;
+    font-family: Roboto;
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
+
+.wrapper .info .name h1 {
+    letter-spacing: 0.2rem;
+    font-size: 3.5rem;
+    margin: 0;
+    text-shadow: 0 0 4px #00f8f8;
+}
+
+.wrapper .info .name span {
+    color: #00f8f8;
+    text-shadow: 0 0 4px #fff;
+    animation: flicker 1.2s;
+}
+
+@keyframes flicker {
+    0% {opacity:1}
+    8% {opacity: 0}
+    16% {opacity: 0}
+    24% {opacity: 1}
+    32% {opacity: 0}
+    40% {opacity: 1}
+    48% {opacity: 0}
+    56% {opacity: 0}
+    64% {opacity: 1}
+    72% {opacity: 0}
+    90% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.wrapper .info .nav-links a {
+    border-radius: 3rem;
+    border: 1px solid #00f8f8;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+}
+
+.wrapper .info .nav-links {
+    margin: 1.2rem 0;
+}
+
+.wrapper .info .nav-links a:hover {
+    background-color: #00f8f8;
+    color: #020202;
+    box-shadow: 0 0 15px 5px rgba(0, 248, 248, 0.5);
+}
+
+.wrapper .info .nav-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.wrapper .info .nav-buttons a {
+    position: relative;
+}
+
+.wrapper .info .nav-buttons a i {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+.wrapper .info .nav-buttons a::before {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    height: 2px;
+    width: 100%;
+    box-shadow: 0 10px 10px 3px rgba(0, 248, 248, 0.5);
+    border-radius: 1px;
+}
+
+.wrapper .info .nav-buttons a i:hover {
+    color: #00f8f8;
+    animation: bounce 1s ease infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 248, 248, 1));
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+    100% {transform: translateY(0);}
+}
+
+.wrapper .next-btn {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    border: 1px solid #00f8f8;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    border-radius: 1.3rem;
+    text-decoration: none;
+    background-color: #00f8f8;
+    font-size: 1.1rem;
+    animation: bounce 1s ease infinite;
+}
+
+.wrapper .next-btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.about, .contact {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.projects {
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.projects::-webkit-scrollbar,
+.about::-webkit-scrollbar,
+.contact::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+.img-container img {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+.about .about-title, .projects .project-header, .contact .contact-title {
+    border: 1px solid #00f8f8;
+    padding: 0 2rem;
+    border-radius: 0.8rem;
+    margin: 2rem 0;
+    color: #000;
+    background-color: #00f8f8;
+}
+
+.about .about-title h3, .projects h4, .contact .contact-title h4 {
+    font-weight: lighter;
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+
+.about .about-content, .projects .project-card {
+    width: 85%;
+    padding: 1rem;
+    background-color: #181818;
+    border-radius: 0.8rem;
+}
+
+.about .tech-stack {
+    margin-top: 0.5rem;
+    width: 90%;
+    text-align: center;
+}
+
+.about .tech-stack h4 {
+    font-weight: lighter;
+}
+
+.tech-container ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    background-color: #181818;
+    border-radius: 0.8rem;
+}
+
+.tech-container ul li {
+    list-style-type: none;
+    padding: 2rem 0;
+}
+
+.tech-container ul li i {
+    font-size: 2.5rem;
+    color: #00f8f8;
+}
+
+.tech-container ul li i:hover {
+    transform: scale(1.6);
+}
+
+.projects .project-card a {
+    float: right;
+    text-decoration: none;
+    color: #00f8f8;
+    font-size: 0.9rem;
+}
+
+.projects .project-card a:hover {
+    color: rgba(0, 248, 248, 0.6);
+}
+
+.projects .project-card .tech-used ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.projects .project-card .tech-used ul li {
+    list-style-type: none;
+}
+
+.projects .project-card .tech-used ul li i {
+    font-size: 1.32rem;
+    border: 1px solid #00f8f8;
+    padding: 0.4rem;
+    border-radius: 1.2rem;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: #00f8f8;
+}
+
+.projects .project-card .tech-used .img-container img {
+    width: 100%;
+    border-radius: 0.8rem
+}
+
+.contact .contact-info {
+    background-color: #181818;
+    width: 85%;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+.contact .contact-info form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    width: 100%;
+}
+
+.contact .contact-info .input-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.contact .contact-info .input-container label {
+    position: absolute;
+    top: 1rem;
+    left: 2.3rem;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background-color: #181818;
+    padding: 0 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact .contact-info .input-container input,
+.contact .contact-info .input-container textarea {
+    background-color: transparent;
+    padding: 1rem;
+    width: 80%;
+    outline: none;
+    border-radius: 0.8rem;
+    border: 1px solid #fff;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.contact .contact-info .input-container textarea {
+    height: 8rem;
+}
+
+.contact .contact-info .input-container input:focus + label,
+.contact .contact-info .input-container input:not(:placeholder-shown) + label,
+.contact .contact-info .input-container textarea:focus + label {
+    top: -0.6rem;
+    left: 2.5rem;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+.contact .contact-info .input-container input:focus,
+.contact .contact-info .input-container textarea:focus {
+    border: 1px solid #00f8f8;
+    caret-color: #00f8f8;
+}
+
+.contact .contact-info button {
+    width: 85%;
+    padding: 0.7rem 0;
+    border-radius: 0.8rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #00f8f8;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.contact .contact-info button:hover {
+    background-color: #00f8f8;
+    color: #020202;
+    box-shadow: 0 0 15px 5px rgba(0, 248, 248, 0.5);
+}
+
+@media screen and (min-width: 767px) {
+    .wrapper {
+        position: fixed;
+        width: 25%;
+    }
+
+    .wrapper aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+    }
+
+    .wrapper .info .name {
+        text-align: center;
+    }
+
+    .wrapper .info .name h1 {
+        font-size: 2.5rem;
+    }
+
+    .wrapper .info .nav-links {
+        display: inline-flex;
+        flex-direction: column;
+        margin-left: 1.5rem;
+    }
+
+    .wrapper .info .nav-links span {
+        margin-left: 1rem;
+        font-size: 1.3rem;
+        padding: 0.2rem 0;
+        color: #00f8f8;
+    }
+
+    .wrapper .info .nav-links a {
+        width: 35%;
+        font-size: 1rem;
+    }
+
+    .wrapper .info .nav-links a:active {
+        background-color: #00f8f8;
+        color: #000;
+    }
+
+    .wrapper .info .nav-buttons {
+        margin-left: 1.5rem;
+    }
+
+    .about, .contact, .projects {
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    .about .about-content {
+        padding: 2rem;
+        font-size: 1.1rem
+    }
+
+    .about .tech-stack .tech-container ul li i {
+        font-size: 3.5rem;
+    }
+
+    .projects .project-card {
+        width: 75%;
+    }
+
+    .wrapper .next-btn {
+        display: none;
+    }
+
+    .contact .contact-info .input-container label {
+        position: absolute;
+        left: 5rem;
+    }
+
+    .contact .contact-info .input-container input:focus + label,
+.contact .contact-info .input-container input:not(:placeholder-shown) + label,
+.contact .contact-info .input-container textarea:focus + label {
+    top: -0.6rem;
+    left: 5.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+}
+}
