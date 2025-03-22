@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       }
     });
   }, { threshold: 0.5 });
-  
+
   const workCards = document.querySelectorAll('.card');
   
   workCards.forEach(card => {
